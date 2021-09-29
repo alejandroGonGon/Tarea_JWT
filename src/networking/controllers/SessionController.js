@@ -17,7 +17,7 @@ class SessionController {
       email,
       password,
     });
-    return response;
+    TokenService.setUser(response.data);
   }
 }
 
