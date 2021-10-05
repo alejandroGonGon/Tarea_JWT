@@ -14,8 +14,15 @@ const Register = () => {
     <div className="login">
       <form onSubmit={handleSubmit}>
         <input type="text" id="username" placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <input type="text" id="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" id="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <label htmlFor="email">
+          email
+          <input type="email" id="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </label>
+        <label htmlFor="password">
+          password
+          <input type="password" id="password " placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </label>
+
         <button type="submit">Register</button>
       </form>
     </div>

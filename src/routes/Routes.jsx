@@ -6,6 +6,8 @@ import About from '../pages/About';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import NavRouter from './NavRouter';
+import ShowUser from '../pages/showUser';
+import RefreshToken from '../pages/RefreshToken';
 
 const Routes = () => (
   <Switch>
@@ -17,6 +19,12 @@ const Routes = () => (
     </NavRouter>
     <NavRouter path="/register">
       <Register />
+    </NavRouter>
+    <NavRouter path="/user">
+      <ShowUser />
+    </NavRouter>
+    <NavRouter path="/refresh">
+      <RefreshToken />
     </NavRouter>
     <Route path="/">
       <NavBar />

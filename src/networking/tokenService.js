@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const getLocalRefreshToken = () => {
   const user = JSON.parse(localStorage.getItem('user'));
   return user?.refreshToken;
@@ -25,10 +26,17 @@ const removeUser = () => {
   localStorage.removeItem('user');
 };
 
+const updateLocalRefreshToken = (token) => {
+  const user = JSON.parse(localStorage.getItem('user'));
+  user.refreshToken = token;
+  localStorage.setItem('user', JSON.stringify(user));
+};
+
 const TokenService = {
   getLocalRefreshToken,
   getLocalAccessToken,
   updateLocalAccessToken,
+  updateLocalRefreshToken,
   getUser,
   setUser,
   removeUser,
